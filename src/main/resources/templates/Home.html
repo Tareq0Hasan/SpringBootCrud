@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring Boot with Thymeleaf</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <h1>Users</h1>
+    <ul th:each="user : ${User}">
+        <li th:text="${user.username + ' - ' + user.email}"></li>
+    </ul>
+</body>
+</html>
